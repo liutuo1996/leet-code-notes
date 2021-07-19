@@ -6,17 +6,17 @@ package com.bread.leetcode.notes.datastructures.stack;
  * @author: LiuTuo
  * @create: 2021-07-13 21:36
  **/
-public class ArrayStack {
+public class ArrayStackDemo {
     //栈最大容量
-    private Integer maxSize;
+    private int maxSize;
     //数组模拟栈
-    private Integer[] stack;
+    private int[] stack;
     //表示栈顶
     private int top=-1;
 
-    public ArrayStack(int maxSize){
+    public ArrayStackDemo(int maxSize){
         this.maxSize=maxSize;
-        stack=new Integer[maxSize];
+        stack=new int[maxSize];
     }
 
     /**
@@ -39,7 +39,7 @@ public class ArrayStack {
      * 入栈
      * @param value
      */
-    public void push(Integer value){
+    public void push(int value){
         if(isFull()){
             throw new RuntimeException("栈已满！");
         }
@@ -50,14 +50,13 @@ public class ArrayStack {
 
     /**
      * 出栈
-     * @param value
      */
-    public Integer pop(Integer value){
+    public int pop(){
         if(isEmpty()){
             throw new RuntimeException("栈无数据！");
         }
-        Integer result=stack[top];
-        stack[top]=null;
+        int result=stack[top];
+        stack[top]=0;
         top--;
         return result;
     }
@@ -69,5 +68,13 @@ public class ArrayStack {
         for(int i=top;i>-1;i--){
             System.out.println(stack[i]);
         }
+    }
+
+    /**
+     * 返回栈顶
+     * @return
+     */
+    public int peek(){
+        return stack[top];
     }
 }
