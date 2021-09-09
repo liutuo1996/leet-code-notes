@@ -30,7 +30,7 @@ class CircleSingleLinkedList{
             System.out.println("节点数量不能少于1");
             return;
         }
-        //辅助变量
+        //辅助变量,记录最后一个节点
         Boy curBoy=null;
         for(int i=1;i<=nums;i++){
             Boy boy=new Boy(i);
@@ -41,7 +41,7 @@ class CircleSingleLinkedList{
             }else{
                 curBoy.next=boy;
                 boy.next=first;
-                curBoy=curBoy.next;
+                curBoy=boy;
             }
         }
     }

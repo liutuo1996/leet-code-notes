@@ -24,6 +24,7 @@ public class SelectSort {
             int minIndex=i;
             for(int j=i+1;j<array.length;j++){
                 if(array[j]<min){
+                    //找到最小数，记录value与下标
                     min=array[j];
                     minIndex=j;
                 }
@@ -32,6 +33,7 @@ public class SelectSort {
             if(minIndex==i){
                 break;
             }
+            //最小数与目前循环i下标替换
             array[minIndex]=array[i];
             array[i]=min;
         }

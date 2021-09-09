@@ -176,7 +176,7 @@ public class SingleLinkedList {
         return newHead;
     }
 
-    public static void main(String[] args) {
+    public static void main1(String[] args) {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         Node node1 = new Node(1, "小明");
         Node node3 = new Node(8, "小白");
@@ -204,7 +204,7 @@ public class SingleLinkedList {
     }
 
 
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         SingleLinkedList singleLinkedList = new SingleLinkedList();
         Node node1 = new Node(1, "小明");
         Node node3 = new Node(8, "小白");
@@ -215,14 +215,14 @@ public class SingleLinkedList {
         singleLinkedList.addNode(node1);
 
 
-        Node node4 = new Node(4, "小红");
+       /* Node node4 = new Node(4, "小红");
         singleLinkedList.addNode(node4);
         System.out.println("新增队列。。。");
         singleLinkedList.show();
 
         singleLinkedList.remove(2);
         System.out.println("删除队列队列。。。");
-        singleLinkedList.show();
+        singleLinkedList.show();*/
 
         System.out.println("反转队列。。。");
         singleLinkedList.reverse(singleLinkedList.getHead());
