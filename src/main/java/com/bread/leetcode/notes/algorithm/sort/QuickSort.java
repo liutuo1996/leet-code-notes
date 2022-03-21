@@ -11,7 +11,7 @@ import java.util.Arrays;
  **/
 public class QuickSort {
     public static void main(String[] args) {
-        int[] arr={4,3,5,7,1,0};
+        int[] arr={1,2,3};
         sort(arr,0,arr.length-1);
         System.out.println(Arrays.toString(arr));
     }
@@ -27,6 +27,11 @@ public class QuickSort {
             int hight=end;
             //指针重合，结束循环
             while (low<hight){
+                /**
+                 * 要从基准值对立面开始循环查找，否则会造成数据比较栈溢出或者排序不正确的情况
+                 * 因为有low<hight条件限制，如果还从low开始遍历，在最终相遇时会有 array[low] > stard基准数
+                 */
+
                 //找到右边比基准数小的数组指针
                 while (low<hight && arr[hight]>=stard){
                     hight--;
